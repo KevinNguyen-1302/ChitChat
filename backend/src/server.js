@@ -4,7 +4,7 @@ import { connectDB } from './libs/db.js';
 import authRoute from './routes/authRoute.js';
 import cookieParser from 'cookie-parser';
 
-dotenv.config();
+dotenv.config({ path: '.env', override: true });
 
 const app = express();
 const PORT = process.env.PORT || 5001;
